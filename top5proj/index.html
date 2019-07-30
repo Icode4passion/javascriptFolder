@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id='main' v-cloak>
+        <div class='bar'>
+            <input type="text" v-model='searchString' placeholder="Enter Employee Name">
+        </div>
+        <ul>
+            <li v-for='emp in filteredEmployee'>
+                <p><h1>{{emp.name}}</h1></p>
+                <p v-bind='emp.id'>{{emp.id}}</p>
+                <p v-bind='emp.company'>{{emp.company}}</p>
+
+
+            </li>
+        </ul>
+    </form>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+
+    <title>VueJs</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="vue-app">
+        <h2>{{ fname }}</h2>
+        methods
+        <p>{{ fullname() }}</p>
+        <p> {{ greet("Morning") }} </p>
+        <a v-bind:href="website">Google</a>
+        <p v-html="mylink"></p>
+
+        <p>Events</p>
+
+        <button v-on:click='add'>Add Age</button>
+        <button v-on:click='subtract'>Subtract Age</button>
+        <p>My Age is {{age}}</p>
+
+        <div id="canvas" v-on:mousemove="updateXY">
+            {{ x }} , {{y}}
+
+        </div>
+
+    </div>
+
+
+<script src="app.js">
+
+</script>
+</body>
+</html>

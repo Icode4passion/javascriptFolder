@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Js Lessons</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <h2>Multiple  Instances</h2>
+    <div id="vue-app-one">
+
+        <p>{{ greet }}</p>
+    </div>
+
+    <div id="vue-app-two">
+        <p>{{ greet }}</p>
+        <button v-on:click='changeTitle'>ChangeTitle</button>
+
+    </div>
+    <h2>Components</h2>
+    <div id="comp">
+        <greet> </greet>
+    </div>
+
+    <section>
+        <h2>References $</h2>
+        <div id="ref">
+            <input type="text" ref="refinput">
+            <button v-on:click="vrefs">Submit</button>
+            <p>My name is {{output}}</p>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
+
+</head>
+<body>
+
+            <div id="app">
+                <h3>Cartoon Characters</h3>
+                <div v-for= "(cartoon , i) in cartoons" v-bind="i">
+                  {{ cartoon.name }}
+                  <p><img src="v-bind:src={{ cartoon.imgSrc }}" v-bind:alt="cartoon.name"></p>
+            </div>
+
+</div>
+
+<script>
+new Vue({
+el: '#app',
+data : {
+cartoons : [
+{ name : "Scooby",
+imgSrc : "https://www.wbkidsgo.com/Portals/4/Images/Content/Characters/Scooby/characterArt-scooby-SD.png"},
+{ name : "Shaggy",
+imgSrc : "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/ShaggyRogers.png/150px-ShaggyRogers.png"}
+
+]
+
+}
+})
+</script>
+
+</body>
+</html>

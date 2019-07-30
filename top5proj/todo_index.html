@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+    <link rel="stylesheet" href="tod_css.css">
+</head>
+<body>
+<div id="app">
+    <h1>Todo List {{ todoCount }}</h1>
+    <ul v-if="todos.length >0">
+        <li v-for="todo in todos" v-bind:class="{ 'completed' : todo.completed }">
+            {{todo.title}}
+            <button v-on:click="deleteTodos(todo)">Delete</button>
+          <button v-on:click="todoCompleted(todo)">{{todo.completed ? "Completed" : "Pending"}}</button>
+        </li>
+    </ul>
+    <div v-else>
+      <p>You do not have any items in list</p>
+    </div>
+
+    <div>
+      <form v-on:submit.prevent="addNewTodo(newTodos)">
+        <input type="text" v-model="newTodos.title" placeholder ="Add a new todo">
+
+        <div>
+      <button>Add Todos</button>
+    </div>
+      </form>
+
+    </div>
+
+    <script src="todoapp.js"></script>
+
+</body>
+</html>
